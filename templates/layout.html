@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlaskApp</title>
+	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<!--This syntax is used to give us the ability to extend the contents of this page. -->
+{% include 'includes/_navbar.html' %}
+<div class="container-fluid">
+{% include 'includes/_messages.html' %}	
+{% block body %} {% endblock %}
+</div>
+
+<script src="//cdn.ckeditor.com/4.11.2/full/ckeditor.js"></script>
+
+<script type="text/javascript">
+	
+CKEDITOR.replace('ed')
+
+</script>
+<style>
+body{
+background-image:url('static/images/homebg3.jpg');
+}
+</style>
+
+</body>
+</html>

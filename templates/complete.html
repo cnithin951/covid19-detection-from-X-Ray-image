@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+     body{
+     	width: 100%;
+     	height: 100%;
+     	margin: 0;
+     	overflow: hidden;
+		background-image: url('normal.jpeg');
+     }
+  	.popup{
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(0,0,0,0.6);
+      padding-top: 100px;
+      display: none;
+	  
+  	}
+    .messagebox{
+
+       width: 500px;
+       height: 250px;
+       background-color: white;
+	   background-image: url('co3.jpg');
+      
+
+    }
+    .bottomcontent{
+    	width: 500px;
+    	height: 40px;
+    	background-color: white;
+
+    }
+    .header{
+    	width: 100%;
+    	height: 40px;
+    	background-color: #f0f0f0;
+    }
+    .message{
+    	 font-size: 23px;
+    	 margin-top:90px;
+
+    }
+  </style>
+  
+</head>
+<body onload="popup()">
+<!--<button onclick="popup()">Show an Alert</button>-->
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+function popup(){
+    $("#popup").fadeIn();
+}
+popup();
+</script>
+
+
+
+<div class="popup" id = "popup">
+	<center>
+	    <div class="messagebox">
+	    <div class="header">
+	    	
+	    </div>	
+           <p class ="message">CORONAVIRUS REPORT: {{ variable }}</p>
+
+	    </div>	
+	    <div class="bottomcontent">
+	    	<a href="home" style="text-decoration: none;">
+	    		<button type="button" class="btn btn-primary">Home</button>
+	    	</a>
+	    	
+	    </div>
+    </center>
+</div>	
+</body>
+</html>
+

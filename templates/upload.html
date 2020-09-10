@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+    <title>File Uploader</title>
+
+<style>
+.file
+{
+	background-color: beige;
+	padding: 5px solid green;
+	margin: 2px solid green;
+	border: 2px solid black;
+}	
+
+</style>
+
+</head>
+<body class="file">
+<div class="jumbotron text-center">
+  <h1>COVID19 TESTING </h1> 
+  <p>UPLOAD THE X RAY IMAGE FOR COVID 19 TESING</p> 
+
+<form id="upload-form" action="{{ url_for('upload')}}" method="POST" enctype="multipart/form-data">
+<input type="file" name="file"  accept="image/*" multiple>
+<input type="submit" value="Send">
+</form>
+</div>
+</body>
+</html>
