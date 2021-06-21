@@ -194,9 +194,9 @@ def upload():
     image = img_to_array(image)
     image = np.expand_dims(image, axis=0)
     model = load_model('covid19.model')
-    (notSanta, santa) = model.predict(image)[0]
-    label = "NORMAL" if santa > notSanta else "COVID19 INFECTED"
-    proba = santa if santa > notSanta else notSanta
+    (notcovid, covid) = model.predict(image)[0]
+    label = "NORMAL" if covid > notcovid else "COVID19 INFECTED"
+    proba = covid if covid > notcovid else notcovid
     label = "{}: {:.2f}%".format(label, proba * 100)
     output = imutils.resize(orig, width=400)
     cv2.putText(output, label, (10, 25),  cv2.FONT_HERSHEY_SIMPLEX,0.7, (0, 255, 0), 2)
